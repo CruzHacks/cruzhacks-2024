@@ -27,6 +27,7 @@
     "firebase-functions": "^4.4.0"
   },
   "devDependencies": {
+    "eslint-config-custom": "*",
     "@types/rollup-plugin-generate-package-json": "^3.2.0",
     "eslint": "^8.41.0",
     "rimraf": "^5.0.1",

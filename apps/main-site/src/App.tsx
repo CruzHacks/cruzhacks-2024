@@ -21,7 +21,9 @@ function App() {
         </div>
         <div>
           <div style={{ textAlign: "left" }}>
-            <p style={{ fontWeight: "bold" }}>From apps/api (@acme/api)</p>
+            <p style={{ fontWeight: "bold" }}>
+              From apps/functions (@acme/functions)
+            </p>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
           <div style={{ textAlign: "left" }}>
@@ -33,8 +35,8 @@ function App() {
           <div style={{ textAlign: "left" }}>
             <p style={{ fontWeight: "bold" }}>Source code</p>
             <a
-              style={{ color: "lightblue" }}
               href="https://github.com/Hacksore/turborepo-firebase-example"
+              style={{ color: "lightblue" }}
             >
               https://github.com/Hacksore/turborepo-firebase-example
             </a>
