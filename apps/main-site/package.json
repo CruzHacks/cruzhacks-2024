@@ -1,13 +1,13 @@
 {
   "name": "main-site",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "firebase deploy --only hosting",
+    "dev": "vite",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "firebase deploy --only hosting"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@acme/shared": "*",
@@ -18,7 +18,10 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.16",
     "eslint-config-custom": "*",
+    "tailwind": "*",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.3.8"
   }
 }

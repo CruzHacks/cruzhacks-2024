@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { iLikeTurtles } from "@acme/shared";
 
-import "./App.css";
-
 function App() {
   const [data, setData] = useState({});
   useEffect(() => {
@@ -12,37 +10,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="header">
-        <div className="icon-wrap">
-          <img className="icon-firebase" src="/firebase.svg" />
-          <div className="icon-divider">+</div>
-          <img className="icon-turbo" src="/turborepo.svg" />
+    <div className="flex items-center justify-center h-screen w-screen">
+      <div className="flex items-center flex-col gap-10 justify-center">
+        <div className="flex items-center justify-center gap-5 flex-col">
+          <p className="font-bold">From apps/functions (@acme/functions)</p>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
-        <div>
-          <div style={{ textAlign: "left" }}>
-            <p style={{ fontWeight: "bold" }}>
-              From apps/functions (@acme/functions)
-            </p>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
-          </div>
-          <div style={{ textAlign: "left" }}>
-            <p style={{ fontWeight: "bold" }}>
-              From packages/shared (@acme/shared)
-            </p>
-            <pre>{JSON.stringify(iLikeTurtles())}</pre>
-          </div>
-          <div style={{ textAlign: "left" }}>
-            <p style={{ fontWeight: "bold" }}>Source code</p>
-            <a
-              href="https://github.com/Hacksore/turborepo-firebase-example"
-              style={{ color: "lightblue" }}
-            >
-              https://github.com/Hacksore/turborepo-firebase-example
-            </a>
-          </div>
+        <div className="flex items-center justify-center gap-5 flex-col">
+          <p className="font-bold">From packages/shared (@acme/shared)</p>
+          <pre>{JSON.stringify(iLikeTurtles())}</pre>
         </div>
-      </header>
+      </div>
     </div>
   );
 }
