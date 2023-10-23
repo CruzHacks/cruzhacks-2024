@@ -23,7 +23,7 @@
     "typescript": "^5.0.4"
   },
   "engines": {
-    "npm": ">=1.0.0",
+    "yarn": ">=1.0.0",
     "node": ">=14.0.0"
   },
   "packageManager": "yarn@1.22.0"
