@@ -1,0 +1,36 @@
+{
+  "name": "@acme/functions",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18"
+  },
+  "files": [
+    "build"
+  ],
+  "main": "./index.umd.js",
+  "module": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "rimraf ./dist/**/* && vite build",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/rollup-plugin-generate-package-json": "^3.2.0",
+    "eslint": "^8.41.0",
+    "rimraf": "^5.0.1",
+    "rollup-plugin-generate-package-json": "^3.2.0"
+  },
+  "private": true
+}
