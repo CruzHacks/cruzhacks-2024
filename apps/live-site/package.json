@@ -1,11 +1,11 @@
 {
-  "name": "main-site",
+  "name": "live-site",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "dotenv -- tsc && vite build",
     "deploy": "firebase deploy --only hosting",
-    "dev": "vite",
+    "dev": "dotenv -- vite",
     "lint": "eslint src",
     "preview": "vite preview"
   },

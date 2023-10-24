@@ -9,6 +9,8 @@ function App() {
       .then((res) => setData(res));
   }, []);
 
+  console.log(import.meta);
+
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-10">
@@ -19,6 +21,10 @@ function App() {
         <div className="flex flex-col items-center justify-center gap-5">
           <p className="font-bold">From packages/shared (@acme/shared)</p>
           <pre>{JSON.stringify(iLikeTurtles())}</pre>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-5">
+          <p className="font-bold">From loaded from .env</p>
+          <p>VITE_ENV_TEST: &apos;{import.meta.env.VITE_ENV_TEST}&apos;</p>
         </div>
       </div>
     </div>
