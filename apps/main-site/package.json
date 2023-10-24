@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "deploy": "firebase deploy --only hosting",
-    "dev": "vite",
+    "dev": "vite --port 3001",
     "lint": "eslint src",
     "preview": "vite preview"
   },

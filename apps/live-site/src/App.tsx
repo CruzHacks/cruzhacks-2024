@@ -9,11 +9,10 @@ function App() {
       .then((res) => setData(res));
   }, []);
 
-  console.log(import.meta);
-
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-10">
+        <h1 className="text-rose-500">Live Site</h1>
         <div className="flex flex-col items-center justify-center gap-5">
           <p className="font-bold">From apps/functions (@acme/functions)</p>
           <pre>{JSON.stringify(data, null, 2)}</pre>
@@ -26,6 +25,12 @@ function App() {
           <p className="font-bold">From loaded from .env</p>
           <p>VITE_ENV_TEST: &apos;{import.meta.env.VITE_ENV_TEST}&apos;</p>
         </div>
+        <a
+          href={import.meta.env.VITE_MAIN_SITE_URL}
+          className="text-sky-500 underline"
+        >
+          GO TO MAIN SITE
+        </a>
       </div>
     </div>
   );

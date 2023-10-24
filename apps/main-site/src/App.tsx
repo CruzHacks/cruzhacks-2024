@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-10">
+        <h1 className="text-indigo-500">Main Site</h1>
         <div className="flex flex-col items-center justify-center gap-5">
           <p className="font-bold">From apps/functions (@acme/functions)</p>
           <pre>{JSON.stringify(data, null, 2)}</pre>
@@ -20,6 +21,16 @@ function App() {
           <p className="font-bold">From packages/shared (@acme/shared)</p>
           <pre>{JSON.stringify(iLikeTurtles())}</pre>
         </div>
+        <div className="flex flex-col items-center justify-center gap-5">
+          <p className="font-bold">From loaded from .env</p>
+          <p>VITE_ENV_TEST: &apos;{import.meta.env.VITE_ENV_TEST}&apos;</p>
+        </div>
+        <a
+          href={import.meta.env.VITE_LIVE_SITE_URL}
+          className="text-sky-500 underline"
+        >
+          GO TO LIVE SITE
+        </a>
       </div>
     </div>
   );

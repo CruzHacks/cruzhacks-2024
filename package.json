@@ -7,17 +7,16 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "dotenv -- turbo run build",
-    "deploy": "dotenv -- turbo run build --parallel && turbo run deploy --filter=main-site --filter=live-site --filter=functions",
-    "dev": "dotenv -- turbo run dev --parallel",
+    "build": "turbo run build",
+    "deploy": "turbo run build --parallel && turbo run deploy --filter=main-site --filter=live-site --filter=functions",
+    "dev": "turbo run dev --parallel",
     "emulators": "firebase emulators:start",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "start": "dotenv -- concurrently yarn:dev yarn:emulators"
+    "start": "concurrently yarn:dev yarn:emulators"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",
-    "dotenv-cli": "^7.3.0",
     "firebase-tools": "^12.1.0",
     "prettier": "^2.8.8",
     "turbo": "^1.9.8",
