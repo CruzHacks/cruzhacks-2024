@@ -1,6 +1,6 @@
 # CruzHacks 2024 Monorepo
 
-The idea with this repo was to ease development of Firebase functions (if needed) and the two React frontends by sharing configs, formatting, linting rules, types, and components. I used turborepo for this but have encountered some frustrating issues.
+The idea with this repo was to ease development of Firebase functions (assuming we may need an api endpoint or two down the road) and the two React frontends by sharing configs, formatting, linting rules, types, and components. I used turborepo for this but have encountered some frustrating issues.
 
 Some super nifty commands are already working, like `yarn start` at the repo root will start all servers and firebase emulators making it easy to test the whole system. Additionally, `yarn deploy` is working great.
 
